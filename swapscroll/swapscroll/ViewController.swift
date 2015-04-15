@@ -42,12 +42,13 @@ class ViewController: NSViewController {
     }
     
     func swapScrollDirection() {
-        var task = NSTask()
+        var task    = NSTask()
+        var command = [String]()
         
         if mouseDetected() {
-            let command = ["-c", "defaults write com.apple.swipescrolldirection -bool false"]
+            command = ["-c", "defaults write com.apple.swipescrolldirection -bool false"]
         } else {
-            let command = ["-c", "defaults write com.apple.swipescrolldirection -bool true"]
+            command = ["-c", "defaults write com.apple.swipescrolldirection -bool true"]
         }
         
         task.launchPath = "/bin/bash"
