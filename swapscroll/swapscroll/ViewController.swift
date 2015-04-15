@@ -20,7 +20,7 @@ class ViewController: NSViewController {
 
     override var representedObject: AnyObject? {
         didSet {
-        // Update the view, if already loaded.
+        
         }
     }
 
@@ -46,14 +46,12 @@ class ViewController: NSViewController {
         
         if mouseDetected() {
             let command = ["-c", "defaults write com.apple.swipescrolldirection -bool false"]
-            task.launchPath = "/bin/bash"
-            task.arguments  = command
         } else {
             let command = ["-c", "defaults write com.apple.swipescrolldirection -bool true"]
-            task.launchPath = "/bin/bash"
-            task.arguments  = command
         }
         
+        task.launchPath = "/bin/bash"
+        task.arguments  = command
         task.launch()
     }
 }
