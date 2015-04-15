@@ -12,6 +12,7 @@
 		E5ED081F1ADADE47002639B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5ED081E1ADADE47002639B4 /* Images.xcassets */; };
 		E5ED08221ADADE47002639B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5ED08201ADADE47002639B4 /* Main.storyboard */; };
 		E5ED082E1ADADE47002639B4 /* swapscrollTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ED082D1ADADE47002639B4 /* swapscrollTests.swift */; };
+		E5ED08381ADAEF65002639B4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ED08371ADAEF65002639B4 /* Regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		E5ED08271ADADE47002639B4 /* swapscrollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swapscrollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5ED082C1ADADE47002639B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5ED082D1ADADE47002639B4 /* swapscrollTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swapscrollTests.swift; sourceTree = "<group>"; };
+		E5ED08371ADAEF65002639B4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				E5ED081A1ADADE47002639B4 /* AppDelegate.swift */,
-				E5ED081C1ADADE47002639B4 /* ViewController.swift */,
-				E5ED081E1ADADE47002639B4 /* Images.xcassets */,
 				E5ED08201ADADE47002639B4 /* Main.storyboard */,
 				E5ED08181ADADE47002639B4 /* Supporting Files */,
+				E5ED081E1ADADE47002639B4 /* Images.xcassets */,
+				E5ED081C1ADADE47002639B4 /* ViewController.swift */,
+				E5ED08371ADAEF65002639B4 /* Regex.swift */,
 			);
 			path = swapscroll;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				E5ED081D1ADADE47002639B4 /* ViewController.swift in Sources */,
 				E5ED081B1ADADE47002639B4 /* AppDelegate.swift in Sources */,
+				E5ED08381ADAEF65002639B4 /* Regex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +401,7 @@
 				E5ED08331ADADE47002639B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5ED08341ADADE47002639B4 /* Build configuration list for PBXNativeTarget "swapscrollTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +410,7 @@
 				E5ED08361ADADE47002639B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
