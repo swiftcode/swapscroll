@@ -16,6 +16,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         swapScrollDirection()
+        exit(0)   //TODO: This will not happen.  Run continuously.
     }
 
     override var representedObject: AnyObject? {
@@ -34,7 +35,7 @@ class ViewController: NSViewController {
         task.launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)!
+        let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
         
         detected = Regex("mouse").test(output)
         

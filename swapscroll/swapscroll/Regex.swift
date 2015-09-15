@@ -27,7 +27,7 @@ class Regex {
     
     func test(input: String) -> Bool {
         if let expression = self.expression {
-            let matches = expression.matchesInString(input, options: nil, range:NSMakeRange(0, countElements(input))) 
+            let matches = expression.matchesInString(input, options: nil, range:NSMakeRange(0, count(input))) 
             return matches.count > 0
         }
         
