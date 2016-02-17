@@ -26,8 +26,8 @@ class ViewController: NSViewController {
     }
 
     func mouseDetected() -> Bool {
-        var task     = NSTask()
-        var pipe     = NSPipe()
+        let task     = NSTask()
+        let pipe     = NSPipe()
         var detected = false
         
         task.launchPath = "/usr/sbin/ioreg"
@@ -43,7 +43,7 @@ class ViewController: NSViewController {
     }
     
     func swapScrollDirection() {
-        var task    = NSTask()
+        let task    = NSTask()
         var command = [String]()
         
         if mouseDetected() {

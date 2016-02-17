@@ -16,7 +16,12 @@ class Regex {
         self.pattern = pattern
         var error : NSError?
         
-        self.expression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)
+        do {
+            self.expression = try NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+        } catch let error1 as NSError {
+            error = error1
+            self.expression = nil
+        }
         
         if error != nil {
             if let expression = expression {
@@ -27,7 +32,7 @@ class Regex {
     
     func test(input: String) -> Bool {
         if let expression = self.expression {
-            let matches = expression.matchesInString(input, options: nil, range:NSMakeRange(0, count(input))) 
+            let matches = expression.matchesInString(input, options: [], range:NSMakeRange(0, input.characters.count)) 
             return matches.count > 0
         }
         
