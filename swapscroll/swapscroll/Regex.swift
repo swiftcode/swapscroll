@@ -24,8 +24,8 @@ class Regex {
         }
         
         if error != nil {
-            if let expression = expression {
-                
+            if let _ = expression {
+                print("Regex error")
             }
         }
     }

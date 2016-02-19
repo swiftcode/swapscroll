@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //TODO: look into creating status items.
         swapScrollDirection()
         exit(0)   //TODO: This will not happen.  Run continuously.
     }
