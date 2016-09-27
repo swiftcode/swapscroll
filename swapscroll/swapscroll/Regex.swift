@@ -17,22 +17,22 @@ class Regex {
         var error : NSError?
         
         do {
-            self.expression = try NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+            self.expression = try NSRegularExpression(pattern: pattern, options: .caseInsensitive)
         } catch let error1 as NSError {
             error = error1
             self.expression = nil
         }
         
         if error != nil {
-            if let expression = expression {
-                
+            if let _ = expression {
+                print("Regex error")
             }
         }
     }
     
-    func test(input: String) -> Bool {
+    func test(_ input: String) -> Bool {
         if let expression = self.expression {
-            let matches = expression.matchesInString(input, options: [], range:NSMakeRange(0, input.characters.count)) 
+            let matches = expression.matches(in: input, options: [], range:NSMakeRange(0, input.characters.count)) 
             return matches.count > 0
         }
         

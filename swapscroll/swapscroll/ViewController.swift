@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //TODO: look into creating status items.
         swapScrollDirection()
         exit(0)   //TODO: This will not happen.  Run continuously.
     }
@@ -26,8 +27,8 @@ class ViewController: NSViewController {
     }
 
     func mouseDetected() -> Bool {
-        let task     = NSTask()
-        let pipe     = NSPipe()
+        let task     = Process()
+        let pipe     = Pipe()
         var detected = false
         
         task.launchPath = "/usr/sbin/ioreg"
@@ -35,7 +36,7 @@ class ViewController: NSViewController {
         task.launch()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
+        let output: String = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
         
         detected = Regex("mouse").test(output)
         
@@ -43,7 +44,7 @@ class ViewController: NSViewController {
     }
     
     func swapScrollDirection() {
-        let task    = NSTask()
+        let task    = Process()
         var command = [String]()
         
         if mouseDetected() {
