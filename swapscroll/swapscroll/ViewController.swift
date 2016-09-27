@@ -20,12 +20,6 @@ class ViewController: NSViewController {
         exit(0)   //TODO: This will not happen.  Run continuously.
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        
-        }
-    }
-
     func mouseDetected() -> Bool {
         let task     = Process()
         let pipe     = Pipe()
